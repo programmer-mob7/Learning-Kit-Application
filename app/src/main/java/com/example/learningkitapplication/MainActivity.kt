@@ -355,6 +355,7 @@ fun SupplierItem(supplier: Supplier) {
             },
             text = { Text(message) },
             confirmButton = {
+
                 TextButton(onClick = {
                     onDismiss()
                     when (selectedAction) {
@@ -385,7 +386,7 @@ fun StatusBadge(status: SupplierStatus) {
     }
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
+            .clip(RoundedCornerShape(0.dp,8.dp,8.dp,0.dp))
             .background(bgColor)
             .padding(horizontal = 8.dp, vertical = 4.dp)
     ) {
@@ -399,5 +400,13 @@ fun StatusBadge(status: SupplierStatus) {
 fun PreviewSupplierScreen() {
     LearningKitApplicationTheme {
         SupplierScreen()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewSupplierItem() {
+    LearningKitApplicationTheme {
+        SupplierItem(suppliers[0])
     }
 }
