@@ -240,7 +240,7 @@ fun SupplierItem(supplier: Supplier) {
                     style = MaterialTheme.typography.bodySmall,
                     color = Color.Black,
                     modifier = Modifier.widthIn(max = 82.dp),
-                    overflow = TextOverflow.Ellipsis,
+                    overflow = TextOverflow.MiddleEllipsis,
                     softWrap = false,
                     maxLines = 1
                 )
